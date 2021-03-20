@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestSuit" thread-count="2" parallel="none">
+<!--    parallel=none is working-->
+<!--    parallel=method is working-->
+<!--    parallel=test is working-->
+
+    <parameter name="useCloudEnv" value="false"></parameter>
+    <parameter name="cloudEnvName" value="browserStack"></parameter>
+    <parameter name="OS" value="windows"></parameter>
+    <parameter name="os_version" value="10"></parameter>
+<!--    <parameter name="OS" value="OS x"></parameter>-->
+<!--    <parameter name="os_version" value="Sierra"></parameter>-->
+    <parameter name="browserName" value="chrome"></parameter>
+    <parameter name="browserVersion" value="89"></parameter>
+<!--    <parameter name="browserName" value="firefox"></parameter>-->
+<!--    <parameter name="browserVersion" value="86.0"></parameter>-->
+    <parameter name="url" value="https://www.amazon.com/"></parameter>
+
+
+    <test name="Amazon Automation Test Script using chrome">
+        <parameter name="browserName" value="chrome"></parameter>
+        <parameter name="browserVersion" value="89"></parameter>
+
+        <classes>
+            <class name="homepagetest.HomePageTest">
+
+                <methods>
+                    <!--               Test case include or exclude-->
+                    <!--               <exclude name="testSearchbox"></exclude>-->
+                    <!--               <include name="testLogin"></include>-->
+
+                </methods>
+
+
+            </class>
+        </classes>
+    </test>
+
+
+<!--    <test name="Amazon Automation Test Script using firefox">-->
+<!--        <parameter name="browserName" value="firefox"></parameter>-->
+<!--        <parameter name="browserVersion" value="86.0"></parameter>-->
+
+<!--        <classes>-->
+<!--            <class name="homepagetest.HomePageTest">-->
+
+<!--                <methods>-->
+<!--                    &lt;!&ndash;               Test case include or exclude&ndash;&gt;-->
+<!--                    &lt;!&ndash;               <exclude name="testSearchbox"></exclude>&ndash;&gt;-->
+<!--                    &lt;!&ndash;               <include name="testLogin"></include>&ndash;&gt;-->
+
+<!--                </methods>-->
+
+
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+
+
+
+
+
+</suite>
